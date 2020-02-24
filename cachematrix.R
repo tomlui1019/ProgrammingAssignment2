@@ -27,7 +27,7 @@ cacheSolve <- function(x, ...) {
     return(m)
   }
   data <- x$get() ## If it's null, get the vectors from inpu object
-  m <- solve(data) %*% data ## Calculate the inverse of the data and assign it to m
+  m <- solve(data) ## Calculate the inverse of the data and assign it to m
   x$setinverse(m) ## Return the value of inverse to the parenet environment 
   m ## Print the inverse object
 }
